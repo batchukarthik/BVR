@@ -130,15 +130,46 @@
     </form>
   </div>
 
-  <div class="reviews">
-    <h2>What Our Customers Say</h2>
-    <div class="bowl">
-      <p>"Amazing fruit bowls, super fresh and tasty!" - Ramesh</p>
-    </div>
-    <div class="bowl">
-      <p>"Quick delivery and great quality. Highly recommended!" - Priya</p>
-    </div>
+ <div class="reviews">
+  <h2>What Our Customers Say</h2>
+  <div id="comments"></div>
+
+  <button class="button" onclick="toggleForm()">➕ Add Comment</button>
+
+  <div id="commentForm" style="display: none; margin-top: 20px;">
+    <input type="text" id="userName" placeholder="Your Name" required>
+    <textarea id="userComment" placeholder="Your Comment" rows="4" required></textarea>
+    <button class="button" onclick="addComment()">Submit</button>
   </div>
+</div>
+
+<script>
+  function toggleForm() {
+    const form = document.getElementById('commentForm');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+  }
+
+  function addComment() {
+    const name = document.getElementById('userName').value;
+    const comment = document.getElementById('userComment').value;
+
+    if (!name || !comment) {
+      alert('Please enter your name and comment.');
+      return;
+    }
+
+    const commentBox = document.createElement('div');
+    commentBox.classList.add('bowl');
+    commentBox.innerHTML = `<p>"${comment}" - ${name}</p>`;
+
+    document.getElementById('comments').appendChild(commentBox);
+
+    document.getElementById('userName').value = '';
+    document.getElementById('userComment').value = '';
+    toggleForm();
+  }
+</script>
+
 
   <div class="contact">
     <h2>Order via WhatsApp</h2>
