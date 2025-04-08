@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BVR FRUIT BOWLE</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffdf7;
+      color: #333;
+    }
+    header {
+      background-color: #ff6f3c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    h1, h2 {
+      margin: 0;
+    }
+    .menu, .order, .reviews, .contact {
+      padding: 30px;
+    }
+    .bowl {
+      background: #f3f3f3;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .price {
+      font-weight: bold;
+      color: #27ae60;
+    }
+    .button {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: #219150;
+    }
+    footer {
+      background: #ff6f3c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BVR FRUIT BOWLE</h1>
+    <p>Fresh Mixed Fruit Bowls with Toppings – Healthy & Delicious!</p>
+  </header>
+
+  <div class="menu">
+    <h2>Our Menu</h2>
+
+    <div class="bowl">
+      <h3>Basic Fruit Bowl</h3>
+      <p>Mixed seasonal fruits with natural sweetener and seeds topping.</p>
+      <p class="price">Price: ₹60</p>
+      <button class="button">Add to Cart</button>
+    </div>
+
+    <div class="bowl">
+      <h3>Premium Fruit Bowl</h3>
+      <p>All fruits + dry fruits, honey drizzle, chia seeds & extra toppings.</p>
+      <p class="price">Price: ₹70 (incl. GST)</p>
+      <button class="button">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="order">
+    <h2>Delivery Location & Time</h2>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="address">Delivery Address</label>
+      <textarea id="address" name="address" required></textarea>
+
+      <label for="time">Preferred Delivery Time</label>
+      <select id="time" name="time">
+        <option>Morning (8AM - 11AM)</option>
+        <option>Afternoon (12PM - 3PM)</option>
+        <option>Evening (4PM - 7PM)</option>
+      </select>
+
+      <button class="button">Place Order</button>
+    </form>
+  </div>
+
+  <div class="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="bowl">
+      <p>"Amazing fruit bowls, super fresh and tasty!" - Ramesh</p>
+    </div>
+    <div class="bowl">
+      <p>"Quick delivery and great quality. Highly recommended!" - Priya</p>
+    </div>
+  </div>
+
+  <div class="contact">
+    <h2>Order via WhatsApp</h2>
+    <p>Click below to place your order on WhatsApp:</p>
+    <a class="button" href="https://wa.me/919000000000" target="_blank">WhatsApp Us</a>
+  </div>
+
+  <footer>
+    &copy; 2025 BVR FRUIT BOWLE | Freshness in Every Bite 🍉
+  </footer>
+</body>
+</html>
